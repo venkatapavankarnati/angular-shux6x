@@ -10,11 +10,14 @@ import { Inject} from '@angular/core';
 export class AppComponent  {
   name = 'Angular';
   title = "SandBox";
+  temp:any;
   data: any[];
       constructor(dataService: DataService){
-        this.data = dataService.getData(); 
+        this.data = dataService.getData();
+        this.temp = this.data[0].temperature; 
         for(var data1 of this.data)
         {
+          if(data1.temperature === 1.7)
           console.log(data1.temperature);
         }
 }

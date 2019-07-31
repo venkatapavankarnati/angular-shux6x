@@ -1,10 +1,11 @@
 <hello name="{{ name }}"></hello>
 <ul>
 	<li *ngFor="let hero of data">
-	{{hero.temperature}}
-	{{hero.month}}
+<div *ngIf="hero.temperature === 1.7">
+  {{hero.temperature}}
+</div>
 	</li>
 	</ul>
-<p>
+<p >
   Start editing to see some magic happen :)
 </p>
